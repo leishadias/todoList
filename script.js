@@ -19,6 +19,10 @@ function renderList () {
         li.addEventListener('mouseleave', listMouseLeave);
     }
     tasksCounter.innerText=tasks.length;
+    /*default view -all*/
+    document.getElementById("listAll").style.color="black";
+    document.getElementById("listIncomplete").style.color="grey";
+    document.getElementById("listCompleted").style.color="grey";
 }
 /*loads all completed tasks*/
 function renderListComplete () {
@@ -148,9 +152,6 @@ function clickEvent(event){
     }else if (target.id=='completeAll'){
         completeAll();
     }else if (target.id=='listAll'){
-        document.getElementById("listAll").style.color="black";
-        document.getElementById("listIncomplete").style.color="grey";
-        document.getElementById("listCompleted").style.color="grey";
         renderList();
     }else if (target.id=='listIncomplete'){
         document.getElementById("listAll").style.color="grey";
