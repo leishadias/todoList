@@ -1,0 +1,158 @@
+:root {
+    --grey: rgb(225, 223, 223);
+  }
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    background-color: var(--grey);
+  }
+  hr{
+    color: lightgray;
+  }
+  /*heading*/
+  header{
+    padding: 1rem;
+  }
+  h1 {
+    text-align: center;
+  }
+  /*content*/
+  #container {
+    width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+  }
+  /*tasks action*/
+  #task-action {
+    margin: 10px;
+    font-size: 13px;
+    margin-left: 2px;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+  }
+  #task-action span:hover{
+    cursor: pointer;
+    color: black;
+  }
+  /*list items*/
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul li {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul li:hover{
+    background-color: var(--grey);
+  }
+ 
+  /*checkbox and list item*/
+  #list input {
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+  #list label {
+    position: relative;
+    cursor: pointer;
+  }
+  #list label:before {
+    content:'';
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  #list input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  #list input:checked + label:before {
+    background: black;
+  } 
+  #list input:checked + label {
+    text-decoration: line-through;
+  }
+
+  /*delete*/
+  .delete {
+    border-radius: 50%;
+  }
+  .delete:hover {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, 0.2);
+    cursor: pointer;
+  }
+  
+  /*add task input box*/
+  .add-task {
+    width: 100%;
+    padding: 11px;
+    margin: 5px 0;
+    border-radius: 15px;
+    background-color: rgb(239, 236, 236);
+  }
+  #add{
+    outline: none;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(239, 236, 236);
+    width: 90%;
+  }
+
+  #add-icon{
+    float: right;
+    margin: 5px 0;
+  }
+  #add-icon:hover{
+    cursor: pointer;
+  }
+
+  /*footer options*/
+  #footer{
+    margin-top: 10px;
+    font-size: 13px;
+    margin-left: 2px;
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+  }
+  #display-content span:hover{
+    cursor: pointer;
+    color: black;
+  }
+  #listAll{
+    /*by default 'all' is shown*/
+    color: black; 
+  }
+
+  /*hiding icons*/
+  .hide{
+    visibility: hidden;
+  }

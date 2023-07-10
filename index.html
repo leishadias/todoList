@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/87f063257c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <body>
+    <!--Heading-->
+    <header>
+      <h1>Todo List App</h1>
+    </header>
+    
+    <div id="container">
+      <!--textbox to add new tasks -click enter or icon to add tasks to list-->
+      <div class="add-task">
+        <i class="fa-solid fa-clipboard-list"></i>
+        <input placeholder="Type your todo list" id="add"/>
+        <i class="fa-solid fa-circle-plus hide" id="add-icon" title="Add to list"></i>
+      </div>
+      
+      <!-- task action -: complete all: check all, clear completed- delete all checked-->
+      <div id="task-action">
+        <span id="completeAll" title="Check all items"><i class="fa-solid fa-check-double"></i> Complete All Tasks</span>
+        <span id="clearCompleted" title="Clear all checked items">Clear Completed</span>
+      </div>
+      <hr/>
+      <ul id="list">
+        <!--list items will go here-->
+        <!-- <li id="litask1">
+          <input type="checkbox" id="task1" class="custom-checkbox" checked>
+          <label for="task1">Buy groceries</label>
+          <i class="fa-regular fa-circle-xmark hide" data-id="task1"></i>
+        </li> -->
+      </ul>
+      <hr />
+      <footer id="footer">
+        <span><span id="tasks-counter">0</span> Tasks left</span> 
+        <div id="display-content">
+            <span id="listAll" title="Show all tasks">All </span>
+            <span id="listIncomplete" title="Show all incomplete tasks">Incomplete </span>
+            <span id="listCompleted" title="Show all completed tasks">Completed </span>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</body>
+</html>
